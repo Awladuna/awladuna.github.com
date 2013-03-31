@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Obada Kadri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
+
+<!-- Le styles -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+
+<!--[if lt IE 7]>
+<script type="text/javascript" src="js/pngfix.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="navi">
+  <ul class="navigation">
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#profiles">Profiles</a></li>
+  </ul>
+</div>
+
+<div id="top"></div>
+<div id="page">
+  <div class="page-in">
+    <div id="datacontent">
+      <div class="about clearfix">
+        <h1>Obada Kadri</h1>
+        <p></p>
+      </div>
+       
+    </div>
+    <div class="wrapper" >
+      <div id="profiles" >
+        <div id="content">
+          <ul>
+                        <li><a href="http://twitter.com/abu3antar"><img src="http://john.do/card/wp-content/themes/DigitalBusinessCard/profiles/twitter.png" /><strong>Twitter</strong>twitter.com</a></li>
+                        
+                        <li><a href="http://facebook.com/obada.kadri/"><img src="http://john.do/card/wp-content/themes/DigitalBusinessCard/profiles/facebook.png" /><strong>Facebook</strong>facebook.com</a></li>
+                        
+                        <li><a href="http://www.linkedin.com/in/obadakadri/"><img src="http://john.do/card/wp-content/themes/DigitalBusinessCard/profiles/linkedin.png" /><strong>LinkedIn</strong>linkedin.com</a></li>
+                        
+                        <li><a href="http://www.youtube.com/MrObadaKadri"><img src="http://john.do/card/wp-content/themes/DigitalBusinessCard/profiles/youtube.png" /><strong>YouTube</strong>youtube.com</a></li>
+                      
+          <div class="clear"></div>
+          <div id="content">
+                      </div>
+        </div>
+      </div>
+
+      <div id="contact" >
+        <div class="main_content">
+        
+                    <div class="myPic"><img src="/img/handala.png" alt="Obada Kadri"/></div>
+                    <div class="about clearfix"></div>
+        
+                    <div class="row"><span class="field_l i_company">Company:</span><span class="field_r"><a href="http://awladuna.org">Awladuna</a></span></div>
+                              <div class="row"><span class="field_l i_mail">E-Mail:</span><span class="field_r"><a href="mailto:obada@obadakadri.com">obada@obadakadri.com</a></span></div>
+                    
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="footer"><p></p></div>
+<script type="text/javascript" charset="utf-8">
+  $('#content a').each(function () {
+    $('<div class="fader" />').css('opacity', 0).prependTo(this);
+  }).hover(function () {
+    $('img', this).stop().animate({
+      marginLeft : 0
+    }, 150);
+    
+    $('.fader', this).stop().animate({
+      opacity : 0.15
+    });
+    
+  }, function () {
+    $('img', this).stop().animate({
+      marginLeft : 10
+    }, 150);
+    
+    $('.fader', this).stop().animate({
+      opacity : 0
+    });
+  }).find('img').css('marginLeft', 10);
+  
+  $('.navigation').each(function () {
+    var $links = $(this).find('a'),
+      panelIds = $links.map(function() { return this.hash; }).get().join(","),
+      $panels = $(panelIds),
+      $panelwrapper = $panels.filter(':first').parent(),
+      delay = 500,
+      heightOffset = 0;
+       // we could add margin-top + margin-bottom + padding-top + padding-bottom of $panelwrapper
+      
+    $panels.hide();
+    
+    $links.click(function () {
+      var link = this, 
+        $link = $(this);
+      
+      // ignore if already visible
+      if ($link.is('.active')) {
+        return false;
+      }
+      
+      $links.removeClass('active');
+      $link.addClass('active');
+      
+      document.title = 'Obada Kadri - ' + $link.text();
+              
+      if ($.support.opacity) {
+        $panels.stop().animate({opacity: 0 }, delay);
+      }
+      
+			$('.main_content img').hide();
+      $panelwrapper.stop().animate({
+        height: 0
+      }, delay, function () {
+        var height = $panels.hide().filter(link.hash).css('opacity', 1).show().height() + heightOffset + $('.main_content img').height();
+        $('.main_content img').fadeIn();
+        $panelwrapper.animate({
+          height: height
+        }, delay, 'linear');
+      });
+    });
+    
+    $links.filter(window.location.hash ? '[hash=' + window.location.hash + ']' : ':first').click();
+  });
+</script>
+
+<script type="text/javascript">
+var canalytics = { log: function(){ return; }, goal: function(){ return; }};
+var canalytics_site_id = 232483;
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = 'http://stats.churchanalytics.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+
+ </body>
+</html>
+<!-- Dynamic page generated in 0.210 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-04-09 09:31:32 -->
+<!-- Compression = gzip -->
+
+
+<div id="wufoo-z7x3p3">
+Fill out my <a href="http://okadri.wufoo.com/forms/z7x3p3">online form</a>.
+</div>
+<script type="text/javascript">var z7x3p3;(function(d, t) {
+var s = d.createElement(t), options = {
+'userName':'okadri', 
+'formHash':'z7x3p3', 
+'autoResize':true,
+'height':'577',
+'async':true,
+'header':'show'};
+s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'wufoo.com/scripts/embed/form.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+try { z7x3p3 = new WufooForm();z7x3p3.initialize(options);z7x3p3.display(); } catch (e) {}};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');</script>
