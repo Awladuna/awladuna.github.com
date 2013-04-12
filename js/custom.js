@@ -1,5 +1,14 @@
 $(document).ready(function() {
-	$('.contact').click(function(e){
+	$('#contactModal')
+	  .on('shown', function () {
+	    $('body').addClass("modal-open");
+		console.log('adding modal-open class');
+	  })
+	  .on('hidden', function () {
+	    $('body').removeClass("modal-open");
+	});
+	
+		$('.contact').click(function(e){
 		e.preventDefault()
 		$(location).attr('href','mailto:okadri@live.com?body=' + encodeURIComponent("\n\n\n ~ Sent from ObadaKadri.com "));
 	});
