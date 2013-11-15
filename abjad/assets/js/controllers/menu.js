@@ -1,0 +1,2 @@
+function MenuCtrl ($scope, $routeParams) {
+}

@@ -1,0 +1,2 @@
+function abjadCtrl ($scope, $routeParams) {
+}
