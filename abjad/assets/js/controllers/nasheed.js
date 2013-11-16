@@ -3,7 +3,6 @@ function NasheedCtrl ($scope) {
   snd.load();
   snd.play();
   $scope.$on("$destroy", function(){
-    console.log(snd.currentTime);
     snd.pause();
     snd = null;
   });

@@ -4,7 +4,6 @@ function MenuCtrl ($scope) {
     var screenWidth = $(window).width()-10;
     var screenHeight = $(window).height()-40;
     var buttonSize = Math.min(screenWidth/2,screenHeight/3);
-    console.log(screenWidth,screenHeight,buttonSize);
     $('.menu-column, .menu-column p, .menu-column p img').height(buttonSize).width(buttonSize);
     $('.container').css("margin-left", (screenWidth-2*buttonSize)/2);
   });
