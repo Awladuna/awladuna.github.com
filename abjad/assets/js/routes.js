@@ -6,5 +6,10 @@ function abjadRouter ($routeProvider) {
 	.when('/', {
     templateUrl: 'partials/menu.html',
     controller: 'MenuCtrl'
+  })
+	.when('/nasheed', {
+    templateUrl: 'partials/nasheed.html',
+    controller: 'NasheedCtrl'
   });
+  
 }

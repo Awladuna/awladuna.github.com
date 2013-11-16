@@ -1,13 +1,15 @@
 body {
-  background-image: url(../img/board.jpg);
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background: url(../img/board.jpg);
 }
 
 .container {
-    max-width: 400px !important;
+  padding: 15px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+img.fill-img {
+  width: 100%;
+}
+
+.grid-column, .menu-column {
+  padding: 0px;
 }
