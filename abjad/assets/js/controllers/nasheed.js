@@ -12,7 +12,7 @@ function NasheedCtrl ($scope) {
     $(".grid-column img").hide();
   });
   
-  var snd = new Audio("assets/raw/horoof.mp3");
+  var snd = new Audio("assets/raw/horoof.ogg");
   snd.load();
   snd.play();
   
