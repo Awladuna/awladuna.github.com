@@ -1,9 +1,11 @@
 body {
   background: url(../img/board.jpg);
+  padding: 0 15px;
 }
 
-.container {
-  padding: 15px;
+.main-content {
+  padding: 15px 0;
+  position: relative;
 }
 
 img.fill-img {
@@ -12,4 +14,9 @@ img.fill-img {
 
 .grid-column, .menu-column {
   padding: 0px;
+  margin: 0;
+}
+
+.play-column {
+  position: absolute;
 }
