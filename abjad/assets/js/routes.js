@@ -8,8 +8,12 @@ function abjadRouter ($routeProvider) {
     controller: 'MenuCtrl'
   })
 	.when('/nasheed', {
-    templateUrl: 'partials/nasheed.html',
+    templateUrl: 'partials/letters.html',
     controller: 'NasheedCtrl'
+  })
+	.when('/letters', {
+    templateUrl: 'partials/letters.html',
+    controller: 'LettersCtrl'
   });
   
 }
