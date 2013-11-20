@@ -14,6 +14,10 @@ function abjadRouter ($routeProvider) {
 	.when('/letters', {
     templateUrl: 'partials/letters.html',
     controller: 'LettersCtrl'
-  });
+  })
+	.when('/letter/:letter', {
+	 templateUrl: 'partials/letterSong.html',
+	 controller: 'LetterSongCtrl'
+	});
   
 }
