@@ -5,11 +5,10 @@ function LetterSongCtrl ($scope, $routeParams) {
     // Resize and centert the menu
     var screenWidth = $(window).width()-10;
     var screenHeight = $(window).height()-40;
-    var buttonSize = Math.min(screenWidth/6,screenHeight/7);
-    $('.grid-column, .grid-column p, .grid-column p img').height(buttonSize).width(buttonSize);
-    $('.main-content').css("padding-left", (screenWidth-6*buttonSize)/2).css("height", 7*buttonSize+30);
-    $('.play-column, .play-column p, .play-column p img').height(1.5*buttonSize).width(1.5*buttonSize);
-    $('.play-column').css("padding-left", 2*buttonSize).css("bottom", 0);
+    var canvasSize = Math.min(screenWidth,screenHeight);
+    $('.img-container').height(canvasSize).width(canvasSize).css('padding','7%');
+    $('.img-container p, .img-container p img').height(0.8*canvasSize).width(0.8*canvasSize);
+    $('.main-content').css("padding-left", (screenWidth-canvasSize)/2).css("height", canvasSize+30);
   }
 
   $(function() {
@@ -62,7 +61,7 @@ function LetterSongCtrl ($scope, $routeParams) {
         var s = i+"";
         if (s.length < 2) s = "0" + s;
         $("#img").attr('src', 'assets/img/letter/' + $routeParams.letter + '/' + i + '.png')
-        if (++i < intervals[0].length) {
+        if (++i < intervals[currentLetter].length) {
           fadeLoop(i);
         }
       }, intervals[currentLetter][i])

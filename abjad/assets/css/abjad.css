@@ -20,3 +20,9 @@ img.fill-img {
 .play-column {
   position: absolute;
 }
+
+.img-container {
+  background-image: url(../img/roll.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
