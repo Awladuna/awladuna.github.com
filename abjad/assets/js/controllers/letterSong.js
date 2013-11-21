@@ -80,7 +80,7 @@ function LetterSongCtrl ($scope, $routeParams) {
         playLetter(letterID);
       }
       else {
-        window.location.href = "#/letters";
+        window.history.back();
       }
     });
   }
