@@ -1,29 +1,7 @@
 function LetterSongCtrl ($scope, $routeParams) {
+  var letterLoop = false;
   var currentLetter = parseInt($routeParams.letter);
-  
-  function resizeElements () {
-    // Resize and centert the menu
-    var screenWidth = $(window).width()-10;
-    var screenHeight = $(window).height()-40;
-    var canvasSize = Math.min(screenWidth,screenHeight);
-    $('.img-container').height(canvasSize).width(canvasSize).css('padding','7%');
-    $('.img-container p, .img-container p img').height(0.8*canvasSize).width(0.8*canvasSize);
-    $('.main-content').css("padding-left", (screenWidth-canvasSize)/2).css("height", canvasSize+30);
-  }
-
-  $(function() {
-    resizeElements();
-    window.onresize = function () {
-      resizeElements();
-    }  
-  });
-  
-  var snd = new Audio("assets/raw/letter/" + $routeParams.letter + ".ogg");
-  snd.load();
-  snd.play();
-  
-  // Fade in letter as the song plays
-  var i = 0;
+  var snd = null;
   var intervals = [
       		[0,600,2300],
       		[0,600,2300],
@@ -54,24 +32,61 @@ function LetterSongCtrl ($scope, $routeParams) {
       		[0,750,1850],
       		[0,800,800]
       ];
+
+  if ($routeParams.letter == 'all') {
+    letterLoop = true;
+    currentLetter = 0;
+  }
   
-  snd.addEventListener("playing", function() {
-    (function fadeLoop (i) {          
-      setTimeout(function () {   
-        var s = i+"";
-        if (s.length < 2) s = "0" + s;
-        $("#img").attr('src', 'assets/img/letter/' + $routeParams.letter + '/' + i + '.png')
-        if (++i < intervals[currentLetter].length) {
-          fadeLoop(i);
-        }
-      }, intervals[currentLetter][i])
-    })(0);
+  function resizeElements () {
+    // Resize and centert the menu
+    var screenWidth = $(window).width()-10;
+    var screenHeight = $(window).height()-40;
+    var canvasSize = Math.min(screenWidth,screenHeight);
+    $('.img-container').css('height',canvasSize).css('width',canvasSize).css('padding',0.125*canvasSize);
+    $('.img-container img').css('height',0.75*canvasSize).css('width',0.75*canvasSize);
+    $('.main-content').css("padding-left", (screenWidth-canvasSize)/2).css("height", canvasSize+30);
+  }
+
+  $(function() {
+    resizeElements();
+    window.onresize = function () {
+      resizeElements();
+    }  
   });
 
-  snd.addEventListener("ended", function() {
-    window.history.back();
-  });
+  function playLetter (letterID) {
+    var letterString = letterID+"";
+    if (letterString.length < 2) letterString = "0" + letterString;
+    
+    snd = new Audio("assets/raw/letter/" + letterString + ".ogg");
+    snd.load();
+    snd.play();
+  
+    // Fade in letter as the song plays
+    snd.addEventListener("playing", function() {
+      (function fadeLoop (i) {          
+        setTimeout(function () {   
+          $("#img").attr('src', 'assets/img/letter/' + letterString + '/' + i + '.png')
+          if (++i < intervals[letterID].length) {
+            fadeLoop(i);
+          }
+        }, intervals[letterID][i])
+      })(0);
+    });
 
+    snd.addEventListener("ended", function() {
+      if (letterLoop && letterID++ < 27){
+        playLetter(letterID);
+      }
+      else {
+        window.location.href = "#/letters";
+      }
+    });
+  }
+  
+  playLetter(currentLetter);
+  
   $scope.$on("$destroy", function(){
     snd.pause();
     snd = null;
