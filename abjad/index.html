@@ -22,7 +22,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-2 hidden-xs">
+        <div class="col-md-2 hidden-xs hidden-sm">
           <!-- ad -->
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- sideVert -->
@@ -35,11 +35,22 @@
           </script>
         </div>
         <div class="col-md-8" ng-app="AbjadApp">
-          <div class="col-md-12 AbjadApp">
+          <div class="col-md-12 abjad-app">
+            <div class="visible-xs visible-sm text-center">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- smallTop -->
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:234px;height:60px"
+                   data-ad-client="ca-pub-0647348647160188"
+                   data-ad-slot="1466617599"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
             <div ng-view></div>
           </div>
         </div>
-        <div class="col-md-2 hidden-xs text-right">
+        <div class="col-md-2 hidden-xs hidden-sm text-right">
           <!-- ad -->
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <!-- sideVert -->
@@ -61,9 +72,9 @@
       var height = window.innerHeight-70;
       var width = window.innerWidth;
       if (width > height) {
-        $('.AbjadApp').css("width", 0.66*height);
+        $('.abjad-app').css("width", 0.66*height);
       } else {
-        $('.AbjadApp').css("width", "auto");
+        $('.abjad-app').css("width", "auto");
       }
     }
 

@@ -7,8 +7,13 @@ body {
   padding: 15px 0;
 }
 
-.AbjadApp {
+.abjad-app {
   margin: 0 auto;
+}
+
+.abjad-ad {
+  display:table-cell;
+  vertical-align:middle;
 }
 
 .top-buffer {
