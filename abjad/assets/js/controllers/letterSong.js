@@ -37,23 +37,6 @@ function LetterSongCtrl ($scope, $routeParams) {
     letterLoop = true;
     currentLetter = 0;
   }
-  
-  function resizeElements () {
-    // Resize and centert the menu
-    var screenWidth = $(window).width()-10;
-    var screenHeight = $(window).height()-40;
-    var canvasSize = Math.min(screenWidth,screenHeight);
-    $('.img-container').css('height',canvasSize).css('width',canvasSize).css('padding',0.125*canvasSize);
-    $('.img-container img').css('height',0.75*canvasSize).css('width',0.75*canvasSize);
-    $('.main-content').css("padding-left", (screenWidth-canvasSize)/2).css("height", canvasSize+30);
-  }
-
-  $(function() {
-    resizeElements();
-    window.onresize = function () {
-      resizeElements();
-    }  
-  });
 
   function playLetter (letterID) {
     var letterString = letterID+"";

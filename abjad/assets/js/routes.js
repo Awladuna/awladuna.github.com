@@ -19,5 +19,4 @@ function abjadRouter ($routeProvider) {
 	 templateUrl: 'partials/letterSong.html',
 	 controller: 'LetterSongCtrl'
 	});
-  
 }

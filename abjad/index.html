@@ -17,8 +17,37 @@
     <link rel="stylesheet" href="assets/css/abjad.css">
   </head>
   <body>
-    <div class="main-content">
-      <div ng-view></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 hidden-xs">
+          <!-- ad -->
+        </div>
+        <div class="col-md-8">
+          <div ng-view></div>
+        </div>
+        <div class="col-md-2 hidden-xs">
+          <!-- ad -->
+        </div>
+      </div>
     </div>
   </body>
+  <script>
+    function resizeElements () {
+      // Resize the container
+      var height = window.innerHeight-70;
+      var width = window.innerWidth;
+      if (width > height) {
+        $('.container').css("width", height);
+      } else {
+        $('.container').css("width", "auto");
+      }
+    }
+
+    $(function() {
+      resizeElements();
+    });
+    $(window).resize( function () {
+      resizeElements();
+    });
+  </script>
 </html>

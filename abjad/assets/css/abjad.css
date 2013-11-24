@@ -3,9 +3,16 @@ body {
   padding: 0 15px;
 }
 
-.main-content {
+.container {
   padding: 15px 0;
-  position: relative;
+}
+
+.grid-column {
+  padding: 0px;
+}
+
+.grid-column img {
+  margin-bottom: 33%;
 }
 
 img.fill-img {
@@ -17,12 +24,9 @@ img.fill-img {
   margin: 0;
 }
 
-.play-column {
-  position: absolute;
-}
-
 .img-container {
   background-image: url(../img/roll.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  padding: 15%;
 }
