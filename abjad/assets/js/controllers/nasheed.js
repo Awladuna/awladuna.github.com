@@ -1,4 +1,4 @@
-function NasheedCtrl ($scope) {
+AbjadApp.controller('NasheedCtrl', function($scope) {
   $(function() {
     // Hide all letters
     $(".grid-column img, .play-button").hide();
@@ -33,4 +33,4 @@ function NasheedCtrl ($scope) {
     snd = null;
     clearTimeout(timer);
   });
-}
+});

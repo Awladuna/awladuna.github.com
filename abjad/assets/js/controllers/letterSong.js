@@ -1,4 +1,4 @@
-function LetterSongCtrl ($scope, $routeParams) {
+AbjadApp.controller('LetterSongCtrl', function($scope, $routeParams) {
   var letterLoop = false;
   var currentLetter = parseInt($routeParams.letter);
   var snd = null;
@@ -74,4 +74,4 @@ function LetterSongCtrl ($scope, $routeParams) {
     snd.pause();
     snd = null;
   });
-}
+});

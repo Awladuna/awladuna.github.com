@@ -1,5 +1,4 @@
-angular.module('abjadApp', [])
-	.config(abjadRouter);
+AbjadApp = angular.module('AbjadApp', []);
 
 function abjadRouter ($routeProvider) {
 	$routeProvider
@@ -18,5 +17,11 @@ function abjadRouter ($routeProvider) {
 	.when('/letter/:letter', {
 	 templateUrl: 'partials/letterSong.html',
 	 controller: 'LetterSongCtrl'
-	});
+	})
+	.when('/search', {
+    templateUrl: 'partials/search.html',
+    controller: 'SearchCtrl'
+  });
 }
+
+AbjadApp.config(abjadRouter);

@@ -1,4 +1,4 @@
-function MenuCtrl ($scope) {
+AbjadApp.controller('MenuCtrl', function($scope) {
 
   var snd = new Audio("assets/raw/click.ogg");
   snd.load();
@@ -6,4 +6,4 @@ function MenuCtrl ($scope) {
   $scope.clickSound = function () {
     snd.play();
   }
-}
+});

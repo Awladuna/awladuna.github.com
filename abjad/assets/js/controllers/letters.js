@@ -1,2 +1,2 @@
-function LettersCtrl ($scope) {
-}
+AbjadApp.controller('LettersCtrl', function($scope) {
+});

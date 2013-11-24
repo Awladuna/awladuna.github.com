@@ -1,2 +1,2 @@
-function abjadCtrl ($scope, $routeParams) {
-}
+AbjadApp.controller('AbjadCtrl', function($scope) {
+});
