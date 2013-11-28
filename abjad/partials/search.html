@@ -4,13 +4,7 @@
   </div>
 </div>
 <div class="row top-buffer">
-  <div class="col-xs-4">
-    <img class="fill-img" search-option="option1">
-  </div>
-  <div class="col-xs-4">
-    <img class="fill-img" search-option="option2">
-  </div>
-  <div class="col-xs-4">
-    <img class="fill-img" search-option="option3">
+  <div class="col-xs-4" ng-repeat="optionImg in optionImgs">
+    <img class="fill-img" option-image ng-click="checkAnswer()">
   </div>
 </div>
