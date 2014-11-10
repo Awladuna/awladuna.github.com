@@ -21,6 +21,10 @@ function abjadRouter ($routeProvider) {
 	.when('/search', {
     templateUrl: 'partials/search.html',
     controller: 'SearchCtrl'
+  })
+	.when('/tawseel', {
+    templateUrl: 'partials/tawseel.html',
+    controller: 'TawseelCtrl'
   });
 }
 
