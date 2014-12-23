@@ -259,8 +259,26 @@
 
             </sources>
             <sources dir="${basedir}">
-                <file name="src/resource.js"/>
-                <file name="src/menu/menu.js"/>
+                <file name="src/res/res.js"/>
+                <file name="src/res/letters_res.js"/>
+                <file name="src/res/menu_res.js"/>
+                <file name="src/res/cat0_res.js"/>
+                <file name="src/res/cat1_res.js"/>
+                <file name="src/res/cat2_res.js"/>
+                <file name="src/res/cat3_res.js"/>
+                <file name="src/res/cat4_res.js"/>
+                <file name="src/res/cat5_res.js"/>
+                <file name="src/res/cat6_res.js"/>
+                <file name="src/res/words.js"/>
+                <file name="src/menu/exitDialog.js"/>
+                <file name="src/menu/bgLayer.js"/>
+                <file name="src/menu/menuLayer.js"/>
+                <file name="src/menu/menuScene.js"/>
+                <file name="src/item/ControlsLayer.js"/>
+                <file name="src/item/ColoredLayer.js"/>
+                <file name="src/item/MonoChromeLayer.js"/>
+                <file name="src/item/LettersLayer.js"/>
+                <file name="src/item/itemScene.js"/>
                 <file name="main.js"/>
 
             </sources>
