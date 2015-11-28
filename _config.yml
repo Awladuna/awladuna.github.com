@@ -1,0 +1,7 @@
+# Site settings
+title: Awladuna
+description: The Future of Out Ummah
+keywords: Mobile Apps, Arabic, Games
+author: Obada
+baseurl: "/" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
