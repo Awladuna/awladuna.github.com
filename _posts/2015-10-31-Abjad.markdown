@@ -1,6 +1,6 @@
 ---
 title:  "Abjad"
-subtitle: "Easy way to learn the Arabic alphabets (Abjadiyah) for preschoolers"
+subtitle: "Easy way to learn the Arabic alphabet (Abjadiyah) for preschoolers"
 author: "Awladuna"
 avatar: "img/authors/awladuna.png"
 image: "img/abjad.png"
